@@ -13,10 +13,10 @@ tab1, tab2, tab3 = st.tabs(["Penguin Prediction", "Evaluation", "About"])
 
 with tab1:
 
-    model = pickle.load(open('upload/model.penguins.sav','rb'))
-    species_encoder = pickle.load(open('upload/encoder.species.sav','rb'))
-    island_encoder = pickle.load(open('upload/encoder.island.sav','rb'))
-    sex_encoder = pickle.load(open('upload/encoder.sex.sav','rb'))
+    model = pickle.load(open('model.penguins.sav','rb'))
+    species_encoder = pickle.load(open('encoder.species.sav','rb'))
+    island_encoder = pickle.load(open('encoder.island.sav','rb'))
+    sex_encoder = pickle.load(open('encoder.sex.sav','rb'))
 
     st.title('Penguin Species Prection :) ')
 
@@ -40,7 +40,7 @@ with tab1:
 with tab2:
     
     st.header("Evaluation on 5 techniques")
-    evaluations = pickle.load(open('upload/evals.all.sav','rb'))
+    evaluations = pickle.load(open('evals.all.sav','rb'))
 
     x = evaluations.columns
     fig = px.Figure(data=[
